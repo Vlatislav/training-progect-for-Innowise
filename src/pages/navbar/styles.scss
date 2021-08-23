@@ -1,0 +1,25 @@
+nav{
+  display: flex;
+}
+
+li{
+  padding-left: 1.5rem;
+  list-style: none;
+  &:first-child{
+    padding-left: 0;
+  }
+}
+
+a {
+  color:#fff;
+  text-decoration: none;
+  background-image: linear-gradient(currentColor, currentColor);
+  background-position: 0% 100%;
+  background-repeat: no-repeat;
+  background-size: 0% 2px;
+  transition: background-size .3s;
+}
+
+a:hover {
+  background-size: 100% 2px;
+}
