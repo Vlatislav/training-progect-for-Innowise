@@ -1,4 +1,4 @@
-export interface IIncrementModel{
+export interface ICounterChangeModel{
   counter:number,
   errorMessage:string
 }

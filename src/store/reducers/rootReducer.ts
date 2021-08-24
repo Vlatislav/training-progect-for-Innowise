@@ -1,21 +1,17 @@
 import { combineReducers } from 'redux'
-import { IIncrementModel } from '../models/incrementModel';
-import { decrementReducer } from './decrementReducer';
-import { incrementReducer } from './incrementReducer';
+import { ICounterChangeModel } from '../models/counterChangeModel';
 import { strChangeReducer } from './strChangeReducer';
-import { IDecrementModel } from './../models/decrementModel';
-import { IStrChangeModel } from '../models/decrementModel copy';
+import { IStrChangeModel } from '../models/strChangeModel';
+import { counterChangeReducer } from './counterChangeReducer';
 
 export interface RootState {
-  increment:IIncrementModel,
-  decrement:IDecrementModel,
+  counter:ICounterChangeModel,
   strChange:IStrChangeModel
 }
 
 
 export const rootReducer = combineReducers({
-  increment: incrementReducer,
-  decrement: decrementReducer,
+  counter: counterChangeReducer,
   strChange: strChangeReducer,
 })
 

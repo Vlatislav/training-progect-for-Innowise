@@ -3,11 +3,12 @@ import './styles.css';
 import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from '../../store/reducers/rootReducer';
 import { useState } from 'react';
+import { strChangeAction, strDeleteAction } from './../../store/actions/strChangeAction';
 
 function SecondPage() {
   const dispatch = useDispatch()
   const text = useSelector((state:RootState)=>state.strChange.str)
-  const count = useSelector((state:RootState)=>state.increment.counter)
+  const count = useSelector((state:RootState)=>state.counter.counter)
 
   const [valInput,setValInput] = useState('')
 
@@ -16,11 +17,11 @@ function SecondPage() {
   }
 
   const changeValueHandler = () =>{
-    dispatch({type:'SET_VALUE',payload:String(valInput).trim()})
+    dispatch(strChangeAction(String(valInput).trim()))
   }
 
   const deleteValueHandler = () =>{
-    dispatch({type:'DELETE_VALUE'})
+    dispatch(strDeleteAction(''))
     setValInput('')
   }
 

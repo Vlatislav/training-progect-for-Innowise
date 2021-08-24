@@ -1,10 +1,10 @@
-export async function incrementFunc (numb:number) {
-  console.log(numb,'numb from async func')
+export async function asyncFunc (data:any,sec:number) {
+  console.log(data,'numb from async func')
   const answer = await new Promise((res)=>{
     setTimeout(()=>{
-      res(numb)
-    },2000)
-  }).then(num=>num)
+      res(data)
+    },sec)
+  }).then(data=>data)
   console.log(answer,'answer from async func')
   return answer
 }
