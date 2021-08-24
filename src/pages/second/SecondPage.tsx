@@ -5,10 +5,9 @@ import { RootState } from '../../store/reducers/rootReducer';
 import { useState } from 'react';
 
 function SecondPage() {
-
   const dispatch = useDispatch()
-  const text = useSelector((state:RootState)=>state.str.text)
-  const count = useSelector((state:RootState)=>state.counter.counter)
+  const text = useSelector((state:RootState)=>state.strChange.str)
+  const count = useSelector((state:RootState)=>state.increment.counter)
 
   const [valInput,setValInput] = useState('')
 
